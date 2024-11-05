@@ -15,42 +15,37 @@ const config = {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
+        "xl": "1170px",
       },
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          1: 'hsl(var(--color-primary-1))',
+          2: 'hsl(var(--color-primary-2))',
+        },
+        text: {
+          1: 'hsl(var(--color-text-1))',
+          2: 'hsl(var(--color-text-2))',
+          button: 'hsl(var(--color-text-button))',
+          card: 'hsl(var(--color-text-card))',
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          1: 'hsl(var(--color-secondary-1))',
+          2: 'hsl(var(--color-secondary-2))',
+          3: 'hsl(var(--color-secondary-3))',
         },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
+        background: {
+          1: 'hsl(var(--color-background-1))',
         },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+        logo: {
+          default: 'hsl(var(--color-logo-default))',
         },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+        other: {
+          button1: 'hsl(var(--color-other-button1))',
+          button2: 'hsl(var(--color-other-button2))',
+          hoverButton1: 'hsl(var(--color-other-hover-button1))',
+          hoverButton2: 'hsl(var(--color-other-hover-button2))',
         },
       },
       borderRadius: {
