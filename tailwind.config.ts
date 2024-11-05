@@ -21,31 +21,31 @@ const config = {
     extend: {
       colors: {
         primary: {
-          1: 'hsl(var(--color-primary-1))',
-          2: 'hsl(var(--color-primary-2))',
+          white: 'hsl(var(--primary-white))',
+          black: 'hsl(var(--primary-black))'
         },
         text: {
-          1: 'hsl(var(--color-text-1))',
-          2: 'hsl(var(--color-text-2))',
-          button: 'hsl(var(--color-text-button))',
-          card: 'hsl(var(--color-text-card))',
+          primary: 'hsl(var(--text-primary))',
+          secondary: 'hsl(var(--text-secondary))',
+          tertiary: 'hsl(var(--text-tertiary))'
         },
         secondary: {
-          1: 'hsl(var(--color-secondary-1))',
-          2: 'hsl(var(--color-secondary-2))',
-          3: 'hsl(var(--color-secondary-3))',
+          grey: 'hsl(var(--secondary-grey))',
+          white: 'hsl(var(--secondary-white))',
+          red: 'hsl(var(--secondary-red))',
         },
         background: {
-          1: 'hsl(var(--color-background-1))',
+          default: 'hsl(var(--background))'
         },
-        logo: {
-          default: 'hsl(var(--color-logo-default))',
+        'border-color': {
+          default: 'hsl(var(--border))'
         },
-        other: {
-          button1: 'hsl(var(--color-other-button1))',
-          button2: 'hsl(var(--color-other-button2))',
-          hoverButton1: 'hsl(var(--color-other-hover-button1))',
-          hoverButton2: 'hsl(var(--color-other-hover-button2))',
+        button: {
+          card: 'hsl(var(--button-card))',
+          primary: 'hsl(var(--button-primary))',
+          'primary-hover': 'hsl(var(--button-primary-hover))',
+          secondary: 'hsl(var(--button-secondary))',
+          'secondary-hover': 'hsl(var(--button-secondary-hover))',
         },
       },
       borderRadius: {

@@ -5,36 +5,29 @@
 @layer base {
   :root {
     /* Primary Colors */
-    --color-primary-1: 0, 0%, 100%;      /* #FFFFFF */
-    --color-primary-2: 210, 3%, 22%;     /* #363738 */
-
-    /* Text Colors */
-    --color-text-1: 21, 61%, 55%;        /* #D37643 */
-    --color-text-2: 0, 0%, 100%;         /* #FFFFFF */
-    --color-text-button: 21, 61%, 55%;   /* #D37643 */
-    --color-text-card: 21, 61%, 55%;     /* #D37643 */
+    --primary-white: 0, 0%, 100%;
+    --primary-black: 210, 2%, 22%;
 
     /* Secondary Colors */
-    --color-secondary-1: 0, 0%, 96%;    /* #F5F5F5 */
-    --color-secondary-2: 44, 100%, 98%;  /* #FEFAF1 */
-    --color-secondary-3: 0, 70%, 54%;    /* #DB4444 */
+    --secondary-grey: 0, 0%, 96%;
+    --secondary-white: 42, 87%, 97%;
+    --secondary-red: 0, 68%, 56%;
 
     /* Background Color */
-    --color-background-1: 0, 0%, 100%;   /* #FFFFFF */
+    --background: 0, 0%, 100%;
 
-    /* Logo Color */
-    --color-logo-default: 0, 0%, 100%;   /* #FFFFFF */
+    /* Text Colors */
+    --text-primary: 0, 0%, 98%;
+    --text-secondary: 206, 3%, 50%;
+    --text-tertiary: 0, 100%, 0%;
+    
+    /* Buttons */
+    --button-card: 0, 0%, 0%;
+    --button-primary: 360, 67%, 56%;
+    --button-primary-hover: 0, 62%, 67%;
+    --button-secondary: 144, 100%, 50%;
+    --button-secondary-hover: 214, 52%, 75%;
 
-    /* Other Colors */
-    --color-other-button1: 148, 49%, 59%; /* #47B486 */
-    --color-other-button2: 0, 70%, 54%;   /* #DB4444 */
-    --color-other-hover-button1: 10, 66%, 66%; /* #E2B93B */
-    --color-other-hover-button2: 207, 64%, 66%; /* #EB5757 */
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
+    --border: 252, 3%, 72%;
   }
 }
