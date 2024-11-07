@@ -3,8 +3,17 @@ import React from 'react';
 
 import navigationTop from '@/app/_lib/dummy/navigation/top.json'
 import { Input } from '../../ui/input';
+import { createClient } from '@/supabase/server';
+import { signOutAction } from '@/app/actions';
+import { Button } from '../../ui/button';
 
-const Header = () => {
+const Header = async () => {
+  const supabase = await createClient();
+
+  const {
+    data: { session },
+  } = await supabase.auth.getSession();
+
   return (
     <header>
       <div className='min-h-12 bg-button-card flex justify-center items-center text-primary-white gap-x-2'>
@@ -17,10 +26,23 @@ const Header = () => {
           <nav>
             <ul className='flex gap-x-12'>
               {navigationTop.map((item) => (
-                <li key={item.id}>
+                <li key={item.id} className='flex flex-col justify-center items-center'>
                   <Link href={item.path} className='text-base hover:underline'>{item.name}</Link>
                 </li>
               ))}
+              {session ? (
+                <li>
+                  <form action={signOutAction}>
+                    <Button type="submit" variant={"link"} className='px-0'>
+                      Sign out
+                    </Button>
+                  </form>
+                </li>
+              ) : (
+                <li>
+                  <Link href="/sign-up" className='text-base hover:underline'>Sign up</Link>
+                </li>
+              )}
             </ul>
           </nav>
           <div>

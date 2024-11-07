@@ -28,7 +28,7 @@ export default async function Signup(props: {
         
         <div className="flex flex-col gap-y-10">
           <Input
-            name="name"
+            name="username"
             placeholder="Name"
             required
             variant="auth"
@@ -57,7 +57,7 @@ export default async function Signup(props: {
           >
             Create Account
           </SubmitButton>
-          {/* <FormMessage message={searchParams} /> */}
+          <FormMessage message={searchParams} />
         </div>
       </form>
       <div className="flex flex-col gap-y-8 justify-center items-center">
