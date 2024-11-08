@@ -1,6 +1,5 @@
-export type TBreadcrumbs = {
-  breadcrumbs: {
-    path: string;
-    name: string;
-  }[]
+import { TBreadcrumbs } from "../../elements/Breadcrumbs";
+
+export type TBreadcrumbsProps = {
+  breadcrumbs: TBreadcrumbs;
 }
