@@ -4,7 +4,7 @@ import React from 'react';
 import navigationTop from '@/app/_lib/dummy/navigation/top.json'
 import { Input } from '../../ui/input';
 import { createClient } from '@/supabase/server';
-import { signOutAction } from '@/app/actions';
+import { signOutAction } from '@/app/(auth)/actions';
 import { Button } from '../../ui/button';
 
 const Header = async () => {

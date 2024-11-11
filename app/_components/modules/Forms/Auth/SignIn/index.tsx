@@ -1,13 +1,33 @@
-import { signInAction } from "@/app/actions";
-import { FormMessage, Message } from "@/app/_components/form-message";
-import { SubmitButton } from "@/app/_components/submit-button";
-import { Input } from "@/app/_components/ui/input";
-import Link from "next/link";
+'use client';
 
-export default async function Login(props: { searchParams: Promise<Message> }) {
-  //const searchParams = await props.searchParams;
+import { useActionState, useEffect } from 'react'
+
+import { signInAction } from '@/app/(auth)/actions'
+import { SubmitButton } from '@/app/_components/submit-button'
+import { Input } from '@/app/_components/ui/input'
+import Link from 'next/link'
+import React from 'react'
+import { useToast } from '@/app/_lib/hooks/use-toast';
+
+const initialState = {
+  error: ''
+}
+
+const SignInForm = () => {
+  const [state, formAction] = useActionState(signInAction, initialState)
+  const { toast } = useToast()
+
+  useEffect(() => {
+    if (state?.error) {
+      toast({
+        variant: "default",
+        description: state?.error
+      })
+    }
+  }, [state?.error])
+  console.log({ state })
   return (
-    <form className="flex flex-col text-text-tertiary gap-y-12 max-w-[371px] w-full">
+    <form action={formAction} className="flex flex-col text-text-tertiary gap-y-12 max-w-[371px] w-full">
       <div className="flex flex-col gap-y-6">
         <h1 className="text-4xl font-medium">Log in to Exclusive</h1>
         <p className="text-base">Enter your details below</p>
@@ -33,7 +53,6 @@ export default async function Login(props: { searchParams: Promise<Message> }) {
         <div className="flex justify-between items-center">
           <SubmitButton
             pendingText="Signing In..."
-            formAction={signInAction}
             className="bg-button-primary text-primary-white rounded py-4 h-14 min-w-[143px]"
           >
             Log In
@@ -46,8 +65,10 @@ export default async function Login(props: { searchParams: Promise<Message> }) {
           </Link>
         </div>
         
-        {/* <FormMessage message={searchParams} /> */}
+        <p role='status' aria-live='polite'>{state?.error}</p>
       </div>
     </form>
-  );
+  )
 }
+
+export default SignInForm

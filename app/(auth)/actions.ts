@@ -1,6 +1,9 @@
 "use server";
 
 import { encodedRedirect } from "@/app/_lib/utils/encodedRedirect";
+import { getInjection } from "@/di/container";
+import { AuthenticationError } from "@/src/entities/errors/auth";
+import { InputParseError } from "@/src/entities/errors/common";
 import { createClient } from "@/supabase/server";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
@@ -39,21 +42,40 @@ export const signUpAction = async (formData: FormData) => {
   }
 };
 
-export const signInAction = async (formData: FormData) => {
-  const email = formData.get("email") as string;
-  const password = formData.get("password") as string;
-  const supabase = await createClient();
+export const signInAction = async (prevState: any, formData: FormData) => {
+  const instrumentationService = getInjection('IInstrumentationService');
+  return await instrumentationService.instrumentServerAction(
+    'signIn',
+    { recordResponse: true },
+    async () => {
+      const email = formData.get('email')?.toString();
+      const password = formData.get('password')?.toString();
 
-  const { error } = await supabase.auth.signInWithPassword({
-    email,
-    password,
-  });
+      try {
+        const signInController = getInjection('ISignInController');
 
-  if (error) {
-    return encodedRedirect("error", "/sign-in", error.message);
-  }
+        await signInController({ email, password });
 
-  return redirect("/account");
+      } catch (err) {
+        if (
+          err instanceof InputParseError ||
+          err instanceof AuthenticationError
+        ) {
+          return {
+            error: 'Incorrect username or password',
+          };
+        }
+        const crashReporterService = getInjection('ICrashReporterService');
+        crashReporterService.report(err);
+        return {
+          error:
+            'An error happened. The developers have been notified. Please try again later.',
+        };
+      }
+
+      redirect("/account");
+    }
+  )
 };
 
 export const forgotPasswordAction = async (formData: FormData) => {
