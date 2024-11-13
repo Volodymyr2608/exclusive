@@ -7,14 +7,14 @@ const ContactAction: FC<TContactAction> = ({ contactItem }) => {
   const renderItems = (item: TContactAction['contactItem']['items'][number]) => {
     if (item.type === 'phone') {
       return (
-        <ContactItem>
+        <ContactItem key={item.text}>
           Phone: <a href={`tel:${item.text}`}>{item.text}</a>
         </ContactItem>
       )
     }
     if (item.type === 'email') {
       return (
-        <ContactItem>
+        <ContactItem key={item.text}>
           Emails: <a href={`mail:${item.text}`}>{item.text}</a>
         </ContactItem>
       )

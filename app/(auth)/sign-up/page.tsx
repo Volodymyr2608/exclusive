@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Button } from "@/app/_components/ui/button";
 import Image from "next/image";
 
-export default async function Signup(props: {
+export default async function SignUp(props: {
   searchParams: Promise<Message>;
 }) {
   const searchParams = await props.searchParams;

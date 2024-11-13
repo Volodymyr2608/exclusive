@@ -5,11 +5,15 @@ import { DI_RETURN_TYPES, DI_SYMBOLS } from '@/di/types';
 import { IInstrumentationService } from '@/src/application/services/instrumentation.service.interface';
 import { registerAuthenticationModule } from '@/di/modules/authentication.module';
 import { registerMonitoringModule } from '@/di/modules/monitoring.module';
+import { registerContactModule } from '@/di/modules/contact.module';
+import { registerFileModule } from '@/di/modules/file.module';
 
 const ApplicationContainer = createContainer();
 
 registerAuthenticationModule(ApplicationContainer);
 registerMonitoringModule(ApplicationContainer);
+registerContactModule(ApplicationContainer);
+registerFileModule(ApplicationContainer);
 
 export function getInjection<K extends keyof typeof DI_SYMBOLS>(
   symbol: K
