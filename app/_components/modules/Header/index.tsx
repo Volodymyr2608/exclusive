@@ -40,7 +40,7 @@ const Header = async () => {
                 </li>
               ) : (
                 <li>
-                  <Link href="/sign-up" className='text-base hover:underline'>Sign up</Link>
+                  <Link href="/sign-in" className='text-base hover:underline'>Sign in</Link>
                 </li>
               )}
             </ul>

@@ -1,0 +1,55 @@
+[
+  {
+    "id": 1, 
+    "name": "Manage My Account",
+    "children": [
+      {
+        "id": 1,
+        "name": "My profile",
+        "slug": "/account"
+      },
+      {
+        "id": 2,
+        "name": "Address Book",
+        "slug": "/account/address-book"
+      },
+      {
+        "id": 3,
+        "name": "My Payment Options",
+        "slug": "/account/payment-options"
+      }
+    ]
+  },
+  {
+    "id": 2, 
+    "name": "My Orders",
+    "children": [
+      {
+        "id": 1,
+        "name": "My Returns",
+        "slug": "/account/my-returns"
+      },
+      {
+        "id": 2,
+        "name": "My Cancellations",
+        "slug": "/account/my-cancellations"
+      }
+    ]
+  },
+  {
+    "id": 3, 
+    "name": "My WishList",
+    "children": []
+  },
+  {
+    "id": 4, 
+    "name": "My products",
+    "children": [
+      {
+        "id": 1,
+        "name": "Products",
+        "slug": "/account/products"
+      }
+    ]
+  }
+]

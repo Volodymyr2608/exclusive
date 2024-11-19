@@ -1,0 +1,62 @@
+{
+  "account": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "My Account",
+      "path": "/account"
+    }
+  ],
+  "addressBook": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "My Account",
+      "path": "/account"
+    }
+  ],
+  "paymentOptions": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "My Account",
+      "path": "/account"
+    }
+  ],
+  "myReturns": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "My Account",
+      "path": "/account"
+    }
+  ],
+  "myCancellations": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "My Account",
+      "path": "/account"
+    }
+  ],
+  "myProducts": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "Products",
+      "path": "/account/products"
+    }
+  ]
+}
