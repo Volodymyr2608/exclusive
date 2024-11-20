@@ -24,7 +24,7 @@ const AccountLayout: FC<TAccountLayout> = async ({ children, pageType }) => {
       <section className='w-full flex justify-between items-center mb-20'>
         <Breadcrumbs breadcrumbs={accountBreadcrumbs[pageType]} />
         <div>
-          Welcome! {user.user_metadata.username}
+          Welcome! <span className='text-secondary-red font-medium'>{user.user_metadata.username}</span>
         </div>
       </section>
       <div className="w-full grid grid-cols-4">

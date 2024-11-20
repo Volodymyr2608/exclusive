@@ -41,7 +41,7 @@ export const contactController =
             backetName: 'exclusive-backet/contact'
           })
 
-          fileData= fileRes
+          fileData = fileRes
         }
 
         const values = {
