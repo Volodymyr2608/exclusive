@@ -48,11 +48,6 @@ const config = {
           'secondary-hover': 'hsl(var(--button-secondary-hover))',
         },
       },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
       boxShadow: {
         primary: "0px 1px 13px 0px rgba(0, 0, 0, 0.05)"
       },

@@ -24,8 +24,8 @@ const SignInForm = () => {
         description: state?.error
       })
     }
-  }, [state?.error])
-  console.log({ state })
+  }, [state?.error, toast])
+
   return (
     <form action={formAction} className="flex flex-col text-text-tertiary gap-y-12 max-w-[371px] w-full">
       <div className="flex flex-col gap-y-6">

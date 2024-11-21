@@ -7,7 +7,8 @@ import React from 'react'
 const ContactForm = () => {
   return (
     <div className='col-span-2 shadow-primary rounded py-10 px-8'>
-      <form action={contactUsAction} className='flex flex-col gap-y-8'>
+      {/* <form action={contactUsAction} className='flex flex-col gap-y-8'> */}
+      <form className='flex flex-col gap-y-8'>
         <div className='flex justify-between gap-x-2'>
           <Input
             name="name"

@@ -51,7 +51,7 @@ export default async function SignUp(props: {
             sizeCss="auth"
           />
           <SubmitButton
-            formAction={signUpAction}
+            // formAction={signUpAction}
             pendingText="Signing up..."
             className="bg-button-primary text-primary-white rounded py-4 h-14"
           >

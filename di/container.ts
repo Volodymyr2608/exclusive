@@ -8,6 +8,7 @@ import { registerMonitoringModule } from '@/di/modules/monitoring.module';
 import { registerContactModule } from '@/di/modules/contact.module';
 import { registerFileModule } from '@/di/modules/file.module';
 import { registerProductModule } from '@/di/modules/product.module';
+import { registerUserModule } from '@/di/modules/user.module';
 
 const ApplicationContainer = createContainer();
 
@@ -16,6 +17,7 @@ registerMonitoringModule(ApplicationContainer);
 registerContactModule(ApplicationContainer);
 registerFileModule(ApplicationContainer);
 registerProductModule(ApplicationContainer);
+registerUserModule(ApplicationContainer);
 
 export function getInjection<K extends keyof typeof DI_SYMBOLS>(
   symbol: K

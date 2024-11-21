@@ -19,34 +19,33 @@ export class ProductsRepository implements IProductsRepository {
       { name: 'ProductsRepository > createProduct' },
       async () => {
         try {
-          console.log('Created')
-          return {
-            id: "",
-            title: "",
-            description: "",
-            price: 0,
-            created_at: "",
-          }
-        } catch (err) {
-          this.crashReporterService.report(err);
-          throw err; // TODO: convert to Entities error
-        }
-      }
-    );
-  }
+          const supabase = await createClient();
+          
+          const { data, error } = await supabase
+            .from('products')
+            .insert([
+              {
+                title: product.title,
+                description: product.description,
+                price: product.price,
+                user_id: product.userId,
+                category_id: null
+              },
+            ])
+            .select()
 
-  async getProduct(id: number): Promise<Product | undefined> {
-    return await this.instrumentationService.startSpan(
-      { name: 'ProductsRepository > getProduct' },
-      async () => {
-        try {
-          return {
-            id: "",
-            title: "",
-            description: "",
-            price: 0,
-            created_at: "",
+          if (error) {
+            this.crashReporterService.report(error);
+            throw new ProductError('Something went wrong');
           }
+
+          console.log(data)
+
+          if (Array.isArray(data)) {
+            return data[0]
+          }
+        
+          return data
         } catch (err) {
           this.crashReporterService.report(err);
           throw err; // TODO: convert to Entities error

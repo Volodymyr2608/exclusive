@@ -14,7 +14,7 @@ export const presenter = (
         title: p.title,
         description: p.description,
         price: new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'USD' }).format(
-          p.price,
+          +p.price,
         ),
         createdAt: format(p.created_at, 'MM/dd/yyyy')
       }))

@@ -11,6 +11,9 @@ import { IGetAllProductsUseCase } from '@/src/application/use-cases/product/get-
 import { ISignInController } from '@/src/interface-adapters/controllers/auth/sign-in.controller';
 import { IContactController } from '@/src/interface-adapters/controllers/contact/contact.controller';
 import { IProductsRepository } from '@/src/application/repositories/products.repository.interface';
+import { ICreateProductUseCase } from '@/src/application/use-cases/product/create-product.use-case';
+import { ICreateProductController } from '@/src/interface-adapters/controllers/products/create-product.controller';
+import { IUserService } from '@/src/application/services/user.service.interface';
 
 export const DI_SYMBOLS = {
   // Services
@@ -19,6 +22,7 @@ export const DI_SYMBOLS = {
   ICrashReporterService: Symbol.for('ICrashReporterService'),
   IContactService: Symbol.for('IContactService'),
   IFileService: Symbol.for('IFileService'),
+  IUserService: Symbol.for('IUserService'),
 
   // Repositories
   IProductsRepository: Symbol.for('IProductsRepository'),
@@ -28,11 +32,13 @@ export const DI_SYMBOLS = {
   IContactUseCase: Symbol.for('IContactUseCase'),
   IUploadFileUseCase: Symbol.for('IUploadFileUseCase'),
   IGetAllProductsUseCase: Symbol.for('IGetAllProductsUseCase'),
+  ICreateProductUseCase: Symbol.for('ICreateProductUseCase'),
 
   // Controllers
   ISignInController: Symbol.for('ISignInController'),
   IContactController: Symbol.for('IContactController'),
   IGetAllProductsController: Symbol.for('IGetAllProductsController'),
+  ICreateProductController: Symbol.for('ICreateProductController'),
 };
 
 export interface DI_RETURN_TYPES {
@@ -42,6 +48,7 @@ export interface DI_RETURN_TYPES {
   ICrashReporterService: ICrashReporterService;
   IContactService: IContactService;
   IFileService: IFileService;
+  IUserService: IUserService;
 
   // Repositories
   IProductsRepository: IProductsRepository;
@@ -51,9 +58,11 @@ export interface DI_RETURN_TYPES {
   IContactUseCase: IContactUseCase;
   IUploadFileUseCase: IUploadFileUseCase;
   IGetAllProductsUseCase: IGetAllProductsUseCase;
+  ICreateProductUseCase: ICreateProductUseCase;
 
   // Controllers
   ISignInController: ISignInController;
   IContactController: IContactController;
-  IGetAllProductsController: IGetAllProductsController
+  IGetAllProductsController: IGetAllProductsController;
+  ICreateProductController: ICreateProductController;
 }
