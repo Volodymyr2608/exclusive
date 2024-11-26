@@ -1,14 +1,34 @@
+'use client'
+
+import React, { useActionState, useEffect } from 'react'
+
 import { Button } from '@/app/_components/ui/button';
 import { Input } from '@/app/_components/ui/input';
 import { Textarea } from '@/app/_components/ui/textarea';
+import { useToast } from '@/app/_lib/hooks/use-toast';
 import { contactUsAction } from '@/app/contact/actions';
-import React from 'react'
+
+
+const initialState = {
+  error: ''
+}
 
 const ContactForm = () => {
+  const [state, formAction] = useActionState(contactUsAction, initialState);
+  const { toast } = useToast()
+
+  useEffect(() => {
+    if (state?.error) {
+      toast({
+        variant: "default",
+        description: state?.error
+      })
+    }
+  }, [state?.error, toast])
+
   return (
     <div className='col-span-2 shadow-primary rounded py-10 px-8'>
-      {/* <form action={contactUsAction} className='flex flex-col gap-y-8'> */}
-      <form className='flex flex-col gap-y-8'>
+      <form action={formAction} className='flex flex-col gap-y-8'>
         <div className='flex justify-between gap-x-2'>
           <Input
             name="name"

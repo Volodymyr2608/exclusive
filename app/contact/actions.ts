@@ -4,7 +4,7 @@ import { getInjection } from "@/di/container";
 import { InputParseError, UploadFileError } from "@/src/entities/errors/common";
 import { ContactError } from "@/src/entities/errors/contact";
 
-export const contactUsAction = async (formData: FormData) => {
+export const contactUsAction = async (prevState: any, formData: FormData) => {
   const instrumentationService = getInjection('IInstrumentationService');
 
   return await instrumentationService.instrumentServerAction(
@@ -22,6 +22,8 @@ export const contactUsAction = async (formData: FormData) => {
 
         await contactController({ email, name, phone, message, file });
 
+        return {};
+
       } catch (err) {
         if (
           err instanceof InputParseError ||
@@ -35,7 +37,7 @@ export const contactUsAction = async (formData: FormData) => {
           err instanceof UploadFileError
         ) {
           return {
-            error: err,
+            error: 'File upload failed',
           };
         }
         const crashReporterService = getInjection('ICrashReporterService');

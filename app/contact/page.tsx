@@ -1,8 +1,8 @@
 import React from 'react'
-import Breadcrumbs from '../_components/units/Breadcrumbs'
-import ContactInfo from '../_components/modules/Contact/ContactInfo'
+import Breadcrumbs from '@/app/_components/units/Breadcrumbs'
+import ContactInfo from '@/app/_components/modules/Contact/ContactInfo'
 import breadcrumbsContact from '@/app/_lib/dummy/breadcrumbs/contact.json'
-import ContactForm from '../_components/modules/Contact/ContactForm'
+import ContactForm from '@/app/_components/modules/Contact/ContactForm'
 
 const Contact = () => {
   return (

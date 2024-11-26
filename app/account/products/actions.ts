@@ -2,6 +2,7 @@
 
 import { getInjection } from "@/di/container"
 import { ProductError } from "@/src/entities/errors/product";
+import { revalidatePath } from "next/cache";
 
 export const getAllProducts = async () => {
   const instrumentationService = getInjection('IInstrumentationService');
@@ -51,6 +52,8 @@ export const createProduct = async (prevState: any, formData: FormData) => {
           price
         });
         console.log(product)
+
+        revalidatePath('/account/products')
         return {
           data: product
         }
