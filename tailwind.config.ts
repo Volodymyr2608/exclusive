@@ -37,9 +37,6 @@ const config = {
         background: {
           default: 'hsl(var(--background))'
         },
-        'border-color': {
-          default: 'hsl(var(--border))'
-        },
         button: {
           card: 'hsl(var(--button-card))',
           primary: 'hsl(var(--button-primary))',

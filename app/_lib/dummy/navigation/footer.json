@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Support",
+    "items": [
+      {
+        "title": "111 Bijoy sarani, Dhaka,  DH 1515, Bangladesh.",
+        "type": "text",
+        "path": null
+      },
+      {
+        "title": "exclusive@gmail.com",
+        "type": "mail",
+        "path": null
+      },
+      {
+        "title": "+88015-88888-9999",
+        "type": "tel",
+        "path": null
+      }
+    ]
+  },
+  {
+    "name": "Account",
+    "items": [
+      {
+        "title": "My Account",
+        "type": "link",
+        "path": "/account"
+      },
+      {
+        "title": "Login / Register",
+        "type": "link",
+        "path": "/sign-in"
+      },
+      {
+        "title": "Cart",
+        "type": "link",
+        "path": "/cart"
+      },
+      {
+        "title": "Wishlist",
+        "type": "link",
+        "path": "/wishlist"
+      },
+      {
+        "title": "Shop",
+        "type": "link",
+        "path": "/shop"
+      }
+    ]
+  },
+  {
+    "name": "Quick Link",
+    "items": [
+      {
+        "title": "Privacy Policy",
+        "type": "link",
+        "path": "/privacy-policy"
+      },
+      {
+        "title": "Terms Of Use",
+        "type": "link",
+        "path": "/term-of-use"
+      },
+      {
+        "title": "FAQ",
+        "type": "link",
+        "path": "/faq"
+      },
+      {
+        "title": "Contact",
+        "type": "link",
+        "path": "/contact"
+      }
+    ]
+  }
+]

@@ -11,10 +11,13 @@ const inputVariants = cva(
         default: "border border-input",
         auth:
           "border-b border-border-color-default placeholder:text-border-color-default text-base pl-0",
+        subscribe:
+          "border border-primary-white bg-transparent text-text-secondary placeholder:text-secondary text-base pl-0",
       },
       sizeCss: {
         default: "h-10 px-3 py-2",
         auth: "h-10 pr-3 py-2",
+        subscribe: "h-12 pr-3 pl-4 py-3",
       },
     },
     defaultVariants: {

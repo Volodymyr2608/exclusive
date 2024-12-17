@@ -2,10 +2,11 @@ import Link from 'next/link';
 import React from 'react';
 
 import navigationTop from '@/app/_lib/dummy/navigation/top.json'
-import { Input } from '../../ui/input';
+import { Input } from '@/app/_components/ui/input';
 import { createClient } from '@/supabase/server';
 import { signOutAction } from '@/app/(auth)/actions';
-import { Button } from '../../ui/button';
+import { Button } from '@/app/_components/ui/button';
+import Logo from '../../elements/Logo';
 
 const Header = async () => {
   const supabase = await createClient();
@@ -22,7 +23,7 @@ const Header = async () => {
       </div>
       <div className='border-b-border-color-default border-b pt-10 pb-4'>
         <div className='container flex justify-between items-center'>
-          <Link href="/" className='text-2xl font-bold text-text-tertiary'>Exclusive</Link>
+          <Logo />
           <nav>
             <ul className='flex gap-x-12'>
               {navigationTop.map((item) => (
