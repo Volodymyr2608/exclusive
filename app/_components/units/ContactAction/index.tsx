@@ -5,6 +5,7 @@ import ContactItem from '../../elements/ContactItem'
 
 const ContactAction: FC<TContactAction> = ({ contactItem }) => {
   const renderItems = (item: TContactAction['contactItem']['items'][number]) => {
+    console.log(item)
     if (item.type === 'phone') {
       return (
         <ContactItem key={item.text}>
@@ -20,7 +21,7 @@ const ContactAction: FC<TContactAction> = ({ contactItem }) => {
       )
     }
 
-    return <ContactItem>{item.text}</ContactItem>
+    return <ContactItem key={item.text}>{item.text}</ContactItem>
   }
 
   return (
