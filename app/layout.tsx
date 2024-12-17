@@ -3,6 +3,7 @@ import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import Header from "./_components/modules/Header";
 import { Toaster } from "./_components/ui/toaster";
+import Footer from "./_components/modules/Footer";
 
 const poppins = Poppins({
   weight: ['400', '500', '700'],
@@ -35,10 +36,14 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          <main className="min-h-screen flex flex-col items-center">
-            {children}
-          </main>
+          <div className="min-h-screen flex flex-col">
+            <Header />
+            <main className="flex-1">
+              {children}
+            </main>
+            <Footer />
+          </div>
+          
           <Toaster />
         </ThemeProvider>
       </body>

@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <div className='mt-20 container'>
       <Breadcrumbs breadcrumbs={breadcrumbsContact} />
-      <div className='grid grid-cols-3 mt-20 gap-x-8'>
+      <div className='grid grid-cols-3 mt-20 gap-x-8 pb-36'>
         <ContactInfo />
         <ContactForm />
       </div>

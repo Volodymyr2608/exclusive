@@ -2,21 +2,22 @@ import { TContactAction } from '@/app/_lib/types/_components/units/ContactAction
 import { Mail, Phone } from 'lucide-react'
 import React, { FC } from 'react'
 import ContactItem from '../../elements/ContactItem'
+import MailLink from '../../elements/Links/MailLink'
+import TelLink from '../../elements/Links/TelLink'
 
 const ContactAction: FC<TContactAction> = ({ contactItem }) => {
   const renderItems = (item: TContactAction['contactItem']['items'][number]) => {
-    console.log(item)
     if (item.type === 'phone') {
       return (
         <ContactItem key={item.text}>
-          Phone: <a href={`tel:${item.text}`}>{item.text}</a>
+          Phone: <TelLink tel={item.text} />
         </ContactItem>
       )
     }
     if (item.type === 'email') {
       return (
         <ContactItem key={item.text}>
-          Emails: <a href={`mail:${item.text}`}>{item.text}</a>
+          Emails: <MailLink mail={item.text} />
         </ContactItem>
       )
     }
