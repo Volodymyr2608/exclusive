@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Save Big on Electronics",
+    "subTitle": "Explore the Latest iPhone",
+    "subIcon": "/images/apple_logo.png",
+    "link": {
+      "title": "Discover More",
+      "path": "/"
+    },
+    "coverImage": "/images/hero_large.jpg"
+  },
+  {
+    "title": "Exclusive Deals Await",
+    "subTitle": "Upgrade to iPhone 14 Today",
+    "subIcon": "/images/apple_logo.png",
+    "link": {
+      "title": "Shop the Sale",
+      "path": "/"
+    },
+    "coverImage": "/images/hero_large.jpg"
+  },
+  {
+    "title": "Unmissable Offers",
+    "subTitle": "Get Your iPhone Now",
+    "subIcon": "/images/apple_logo.png",
+    "link": {
+      "title": "View Deals",
+      "path": "/"
+    },
+    "coverImage": "/images/hero_large.jpg"
+  }
+]

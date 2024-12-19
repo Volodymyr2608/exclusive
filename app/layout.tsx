@@ -1,11 +1,11 @@
-import { Poppins } from "next/font/google";
+import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import Header from "./_components/modules/Header";
 import { Toaster } from "./_components/ui/toaster";
 import Footer from "./_components/modules/Footer";
 
-const poppins = Poppins({
+const poppins = Inter({
   weight: ['400', '500', '700'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
