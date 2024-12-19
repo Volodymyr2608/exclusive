@@ -1,0 +1,74 @@
+[
+  { 
+    "name": "Woman's Fashion", 
+    "link": "/products/categories/womens-fashion",
+    "subcategories": [
+      { "name": "Clothing", "link": "/products/categories/womens-fashion/clothing" },
+      { "name": "Shoes", "link": "/products/categories/womens-fashion/shoes" },
+      { "name": "Accessories", "link": "/products/categories/womens-fashion/accessories" },
+      { "name": "Bags", "link": "/products/categories/womens-fashion/bags" }
+    ]
+  },
+  { 
+    "name": "Men's Fashion", 
+    "link": "/products/categories/mens-fashion",
+    "subcategories": [
+      { "name": "Clothing", "link": "/products/categories/mens-fashion/clothing" },
+      { "name": "Shoes", "link": "/products/categories/mens-fashion/shoes" },
+      { "name": "Watches", "link": "/products/categories/mens-fashion/watches" },
+      { "name": "Accessories", "link": "/products/categories/mens-fashion/accessories" }
+    ]
+  },
+  { 
+    "name": "Electronics", 
+    "link": "/products/categories/electronics",
+    "subcategories": [
+      { "name": "Mobile Phones", "link": "/products/categories/electronics/mobile-phones" },
+      { "name": "Laptops", "link": "/products/categories/electronics/laptops" },
+      { "name": "Televisions", "link": "/products/categories/electronics/televisions" },
+      { "name": "Cameras", "link": "/products/categories/electronics/cameras" }
+    ]
+  },
+  { 
+    "name": "Home & Lifestyle", 
+    "link": "/products/categories/home-lifestyle",
+    "subcategories": [
+      { "name": "Furniture", "link": "/products/categories/home-lifestyle/furniture" },
+      { "name": "Home Decor", "link": "/products/categories/home-lifestyle/home-decor" },
+      { "name": "Kitchenware", "link": "/products/categories/home-lifestyle/kitchenware" },
+      { "name": "Bedding", "link": "/products/categories/home-lifestyle/bedding" }
+    ]
+  },
+  { 
+    "name": "Brands", 
+    "link": "/products/brands",
+    "subcategories": [
+      { "name": "Apple", "link": "/products/brands/apple" },
+      { "name": "Samsung", "link": "/products/brands/samsung" },
+      { "name": "Nike", "link": "/products/brands/nike" },
+      { "name": "Adidas", "link": "/products/brands/adidas" }
+    ]
+  },
+  { 
+    "name": "Health & Beauty", 
+    "link": "/products/categories/health-beauty",
+    "subcategories": [
+      { "name": "Skincare", "link": "/products/categories/health-beauty/skincare" },
+      { "name": "Makeup", "link": "/products/categories/health-beauty/makeup" },
+      { "name": "Haircare", "link": "/products/categories/health-beauty/haircare" },
+      { "name": "Fragrances", "link": "/products/categories/health-beauty/fragrances" }
+    ]
+  },
+  { 
+    "name": "Sports & Outdoor", 
+    "link": "/products/categories/sports-outdoor"
+  },
+  { 
+    "name": "Groceries & Pets", 
+    "link": "/products/categories/groceries-pets"
+  },
+  { 
+    "name": "All Products", 
+    "link": "/products"
+  }
+]

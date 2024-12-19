@@ -1,7 +1,9 @@
+import MainNavigation from "@/app/_components/modules/Home/MainNavigation";
+
 export default async function Index() {
   return (
     <>
-      <div>Home page</div>
+      <MainNavigation />
     </>
   );
 }
